@@ -1,0 +1,161 @@
+---
+title: "Statcast 2023 Principal Component Analysis"
+author: "Lance Brady"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# Introduction
+Principal Component Analysis (PCA) is a technique used to reduce the dimensionality of a dataset. It does this by creating new variables, called principal components, that are linear combinations of the original variables. These principal components capture the underlying patterns in the data, allowing us to simplify the dataset and identify the most important variables. In this analysis, we will use PCA to analyze Statcast data from qualified hitters in 2023. We will start with 19 variables (listed below), and end up with 3 components that capture most of the variation in the data. We will identify the most important components in the data and create a Principal Component Score Plot to visualize the data. 
+
+## Variables Used
+The variables used in this analysis are:
+
+1. player_age: Player Age
+2. pa: Plate Appearances
+3. k_percent: Strikeout percentage
+4. bb_percent: Walk percentage
+5. babip: Batting Average on Balls in Play
+6. b_intent_walk: Intentional Walks
+7. xba: Expected Batting Average
+8: xslg: Expected Slugging Percentage
+9. xwoba: Expected Weighted On-Base Average
+10. xobp: Expected On-Base Percentage
+11. xiso: Expected Isolated Power
+12. xbacon: Expected Batting Average on Contact
+13. sweet_spot_percent: Sweet Spot Percentage
+14. barrel_batted_rate: Barrel Batted Rate
+15. hard_hit_percent: Hard Hit Percentage
+16. avg_best_speed: EV50
+17. avg_hyper_speed: Adjusted EV
+18. whiff_percent: Whiff Percentage
+19. swing_percent: Swing Percentage
+
+## Load in Libraries
+```{r, message = FALSE, warning = FALSE}
+library(car)
+library(corrplot)
+```
+
+## Load in Data
+```{r}
+## Load the data
+statcast2023_1 <- read.csv("statcastbatting2023.csv")
+
+## Remove the first three columns (player_id, player_name, and year) as they are 
+## not needed
+statcast2023 <- statcast2023_1[, -c(1, 2, 3)]
+```
+
+# Check Dimensions and Variable Names
+```{r}
+dim(statcast2023)
+names(statcast2023)
+```
+We have 134 players and 19 variables. This is enough data for Principal
+Component Analysis.
+
+
+## Check for Multivariate Normality
+First, we will want to do a chi-square quantile plot for multivariate normality.
+This is not needed for PCA, but it is a good practice to check for multivariate normality.
+```{r}
+source("http://www.reuningscherer.net/multivariate/R/CSQPlot.r.txt")
+CSQPlot(statcast2023)
+```
+
+It is not multivariate normal, as a large proportion falls outside the 95% confidence curves. However, it is close, so we will still do Parallel Analysis later.
+
+
+Next, we will want to compute the correlation matrix for the data. This will allow us to see how the variables are related to each other. 
+```{r}
+corrplot.mixed(cor(statcast2023), lower.col = "black", upper = "ellipse",
+tl.col = "black", number.cex = .45, order = "hclust",
+tl.pos = "lt", tl.cex = .7)
+```
+
+The correlation matrix shows that there are some variables that are highly correlated with each other. This is a good sign for PCA, as it means that there are underlying patterns in the data that can be captured by the principal components.
+
+Next, we can perform Principle Components Analysis on the data.
+
+# Perform PCA
+## Method #1: 
+We will say somewhat arbitrarily that we want to capture 80% of the variance in the data. This is a common threshold for PCA. 
+```{r, message = FALSE, warning = FALSE}
+library(PerformanceAnalytics)
+## Perform PCA
+pc1 <- princomp(statcast2023, cor = TRUE)
+summary(pc1)
+```
+We can see that the first 5 principal components capture 80% of the variance in the data.
+
+## Method #2: 
+We would like to retain components where the eigenvalues are greater than 1. This will occur when the standard deviations are greater than 1.
+
+```{r}
+pc1$sdev
+```
+Using this method, we again will retain 5 components, as they all have standard deviations greater than 1.
+
+## Method #3:
+We will make a scree plot and keep components up to where we see an elbow in the plot.
+```{r}
+screeplot(pc1, type = "lines", col = "red", lwd = 2, pch = 19, cex = 1.2,
+main = "Scree Plot of Statcast 2023 Batting Data")
+```
+  
+Although there is no clear elbow, I concluded that there is a slight elbow at component 4, so this method suggests retaining 3 components.
+
+## Method #4:
+Although the chi-square quantile plot did not indicate precise multivariate normality, we will do Parallel Analysis anyway as it looked close to normal. 
+```{r}
+#get the function online
+source("http://www.reuningscherer.net/multivariate/R/parallel.r.txt")
+
+#make the parallel analysis plot using the parallelplot function
+parallelplot(pc1)
+```
+  
+This method also indicates that we should use just 3 components, as the eigenvalues are below the predicted eigenvalues for only the first 3 components.
+
+## Loadings of Retained PCA Components
+I will somewhat arbitrarily decide to use just 3 components, as two out of four methods of PCA suggested this, and it will lead to easier analysis.
+Let's print the loadings of the PCA components so that we can see how the variables are related to the components.
+```{r}
+print(pc1$loadings, cutoff = 0, digits = 2)
+```
+ 
+For each component, we want to choose the variables with the highest absolute coefficients, as they are contributing most to that component.
+
+## Component #1: The "Quality of Contact" Component
+The largest absolute coefficients for this component are Expected Slugging (xslg), Expected Weighted On Base Average (xwoba), Expected Isolated Power (xiso), EV50, and Adjusted EV. This component seems to be related to a player's quality of contact. By definition of these variables, they are all calculated from things like exit velocity and launch angle over a season, which are related to how well a batter is hitting balls they make contact with. Most at-bats end in some sort of contact, so it makes sense that this would be the first (and most important) component.
+
+## Component #2: The "Get on Base" Component
+The largest absolute coefficients for this component are Strikeout Percentage (k_percent), Whiff Percentage (whiff_percent), Expected Batting Average (xba), and Expected On-Base Percentage (xobp). This component seems to be related to a player's ability to get on base. That is, it is related to how often a player swing and miss (and from that how often they strike out), and how often they get hits or walks. This is the second most important component.
+
+## Component #3: The "Plate Approach" Component
+The largest absolute coefficients for this component were Swing Percentage (swing_percent), and Walk Percentage (bb_percent). This component seems to encompass how a batter approaches the plate. Do they swing a lot or try to draw walks? This is the third most important component.
+
+# Principal Component Score Plot
+Next, we will want to create a Principal Component Score Plot for the first two components.
+```{r, message = FALSE, warning = FALSE}
+source("http://reuningscherer.net/multivariate/r/ciscoreplot.R.txt")
+
+# Using the first two components
+statcast2023_2 = statcast2023_1[, -c(2, 3)]
+ciscoreplot(pc1, c(1, 2), statcast2023_2[, 1])
+
+```
+  
+This plot shows us the scores for the first two principal components, along with a 95% CI ellipse. Based on the signs of our coefficients, we need to keep in mind that stats like Strikeout Percentage and Whiff Percentage should have an opposite sign to stats like Expected Slugging (xslg), Expected Weighted On Base Average (xwoba), as better hitters will strikeout less and get better contact. With that said, we have multiple outliers to the data, which are in general, players who make terrific contact and get on base well. These include Juan Soto, Mookie Betts, Ronald Acuña Jr., Jose Ramírez, Freddie Freeman, and Shohei Ohtani. Then there is Luis Arraez, who does not make incredible contact with the ball, however he makes contact at a high rate, does not whiff a lot, and rarely strikes out. Steven Kwan is similar, although not as good in either category.
+
+# Conclusion
+I found that Statcast data from qualified hitters in 2023 can be broken down using Principal Component Analysis into 3 main components, The "Quality of Contact" Component, The "Get on Base" Component, and The "Plate Approach" Component. These components seem to capture most of the data, allowing for us to simplify from the 19 original variables we started with. We also found that there are some players who are outliers in the data, such as Juan Soto, Mookie Betts, Ronald Acuña Jr., Jose Ramírez, Freddie Freeman, and Shohei Ohtani. These players are all known for their ability to make exceptionally good contact and get on base.
+
+
+
+
+
+
