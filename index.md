@@ -10,7 +10,7 @@ Here are some different projects I've been working on:
 - [Statcast 2023 Multivariate Analysis](./statcast2023-multivariate-analysis/)
 - [Frontier League Scouting Samples](./frontier-league-pitcher-scouting-samples/)
 
-**<ins>Content:<ins>**
+<ins>**content:**<ins>
 
 **baseball-research:** This folder contains research projects exploring various topics in baseball analytics.
 
