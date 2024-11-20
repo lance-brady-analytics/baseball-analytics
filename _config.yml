@@ -1,4 +1,3 @@
-baseurl: "/baseball-analytics"
 remote_theme: "mmistakes/minimal-mistakes"
 plugins:
   - jekyll-remote-theme
@@ -7,6 +6,8 @@ plugins:
 
 title: "Lance Brady Analytics"
 description: "A repository of baseball analytics research, multivariate analysis, and scouting samples."
+baseurl: "/baseball-analytics/"
+url: "https://lance-brady-analytics.github.io"
 
 minimal_mistakes:
   navigation:
