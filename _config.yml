@@ -1,0 +1,16 @@
+remote_theme: "mmistakes/minimal-mistakes"
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+title: "Lance Brady Analytics"
+description: "A repository of baseball analytics research, multivariate analysis, and scouting samples."
+minimal_mistakes:
+  navigation:
+    - title: "Home"
+      url: /
+    - title: "Baseball Research"
+      url: /baseball-research/
+    - title: "Statcast 2023 Analysis"
+      url: /statcast2023-multivariate-analysis/
+    - title: "Scouting Samples"
+      url: /frontier-league-pitcher-scouting-samples/
