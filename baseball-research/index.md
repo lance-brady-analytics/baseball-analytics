@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Baseball Research
-permalink: /baseball-analytics/baseball-research/
+permalink: /baseball-research/
 ---
 
 # Baseball Research
