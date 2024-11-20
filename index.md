@@ -6,9 +6,9 @@ Welcome to my Baseball Analytics Repository! I am a senior at Yale majoring in S
 
 Here are some different projects I've been working on:
 
-- [Baseball Research]({{ site.baseurl }}/baseball-research/)
-- [Statcast 2023 Multivariate Analysis]({{ site.baseurl }}/statcast2023-multivariate-analysis/)
-- [Frontier League Scouting Samples]({{ site.baseurl }}/frontier-league-pitcher-scouting-samples/)
+- [Baseball Research](./baseball-research/)
+- [Statcast 2023 Multivariate Analysis](./statcast2023-multivariate-analysis/)
+- [Frontier League Scouting Samples](./frontier-league-pitcher-scouting-samples/)
 
 **<ins>Content:<ins>**
 
