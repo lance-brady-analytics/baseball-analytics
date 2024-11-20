@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: home
 title: Statcast 2023 Multivariate Analysis
 permalink: /statcast2023-multivariate-analysis/
 ---
