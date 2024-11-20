@@ -4,7 +4,6 @@ title: Statcast 2023 Multivariate Analysis
 permalink: /statcast2023-multivariate-analysis/
 ---
 
-# Statcast 2023 Multivariate Analysis
 This folder contains two projects using different multivariate techniques to study 2023 hitters with Statcast data.
 
 - [PCA Analysis (PDF)](statcast2023-multivariate-analysis/statcast2023PCA.pdf)
