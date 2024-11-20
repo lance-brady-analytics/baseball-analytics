@@ -1,4 +1,4 @@
-Welcome to my Baseball Analytics Repository! This repository is a collection of various projects and analyses focused on different aspects of baseball, combining research, statistical techniques, and scouting insights.
+Welcome to my Baseball Analytics Repository! I am a senior at Yale studying Statistics & Data Science with a passion for baseball. This repository is a collection of various projects and analyses focused on different aspects of baseball, combining research, statistical techniques, and scouting insights.
 
 Repository Structure
 1. baseball-research: This folder contains research projects exploring various topics in baseball analytics. 
