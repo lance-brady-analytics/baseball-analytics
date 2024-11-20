@@ -4,7 +4,6 @@ title: Baseball Research
 permalink: /baseball-research/
 ---
 
-# Baseball Research
 This folder contains a document with abstracts of the following projects:
 1. **Creating a Frontier League Player Projection System**
 2. **Quantifying a Catcher’s Impact on Pitcher’s Performance using Bayesian Item Reponse Theory**
