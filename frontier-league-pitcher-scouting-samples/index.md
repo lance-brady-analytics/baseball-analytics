@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: single
 title: Frontier League Scouting Samples
 permalink: /frontier-league-pitcher-scouting-samples/
 ---
