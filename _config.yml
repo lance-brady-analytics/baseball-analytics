@@ -9,6 +9,21 @@ description: "A repository of baseball analytics research, multivariate analysis
 baseurl: "/baseball-analytics/"
 url: "https://lance-brady-analytics.github.io"
 
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      sidebar:
+        nav: "home"
+
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      sidebar:
+        nav: "home"
+
 minimal_mistakes:
   navigation:
     - title: "Home"
@@ -19,3 +34,5 @@ minimal_mistakes:
       url: /statcast2023-multivariate-analysis/
     - title: "Scouting Samples"
       url: /frontier-league-pitcher-scouting-samples/
+
+
