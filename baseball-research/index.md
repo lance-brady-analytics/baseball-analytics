@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: single
 title: Baseball Research
 permalink: /baseball-research/
 ---
