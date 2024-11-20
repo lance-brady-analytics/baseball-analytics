@@ -6,6 +6,7 @@ plugins:
 
 title: "Lance Brady Analytics"
 description: "A repository of baseball analytics research, multivariate analysis, and scouting samples."
+baseurl: ""
 
 minimal_mistakes:
   navigation:
