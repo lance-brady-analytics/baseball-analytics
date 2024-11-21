@@ -2,6 +2,8 @@
 layout: single
 title: Frontier League Scouting Samples
 permalink: /frontier-league-pitcher-scouting-samples/
+author_profile: true
+sidebar: true
 ---
 
 This folder contains two Frontier League Pitcher Scouting samples from my Summer 2024 Baseball Operations and Analytics Internship with the New York Boulders.  
