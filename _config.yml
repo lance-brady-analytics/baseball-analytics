@@ -16,14 +16,14 @@ defaults:
       path: ""
       type: "posts"
     values:
-      sidebar:
+      sidebar: true
         nav: "home"
 
   - scope:
       path: ""
       type: "pages"
     values:
-      sidebar:
+      sidebar: true
         nav: "home"
 
 minimal_mistakes:
