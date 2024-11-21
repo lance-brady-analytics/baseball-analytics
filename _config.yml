@@ -9,6 +9,7 @@ description: "A repository of baseball analytics research, multivariate analysis
 baseurl: "/baseball-analytics/"
 url: "https://lance-brady-analytics.github.io"
 author_profile: true
+sidebar: true
 
 defaults:
   - scope:
