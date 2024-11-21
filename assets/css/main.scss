@@ -1,0 +1,36 @@
+---
+---
+@import "minimal-mistakes";
+
+// Disable the grayed-out effect on the sidebar author links
+.author__urls-wrapper {
+  opacity: 1 !important;
+}
+
+// Disable the grayed-out effect on the avatar image
+.author__avatar img {
+  opacity: 1 !important;
+}
+
+// Allow the location text to wrap and display completely
+.author__location {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: initial;
+}
+
+// Increase the sidebar width
+.sidebar {
+  width: 300px;  // Adjust the width as needed
+}
+
+// Customize the base font size and line height
+body {
+  font-size: 16px;      // Set your desired font size
+  line-height: 1.6;     // Set your desired line height
+}
+
+// Reduce margin between paragraphs
+p + p {
+  margin-top: 1em;  // Adjust as needed
+}
