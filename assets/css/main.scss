@@ -5,13 +5,6 @@ $sidebar-author-opacity: 1 !default;  // Set the opacity to fully opaque
 
 @import "minimal-mistakes";
 
-// Allow the location text to wrap and display completely
-.author__location {
-  white-space: normal;
-  overflow: visible;
-  text-overflow: initial;
-}
-
 // Adjust the width of the author content
 .author__content {
   width: 100%;
