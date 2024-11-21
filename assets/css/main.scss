@@ -2,6 +2,12 @@
 ---
 @import "minimal-mistakes";
 
+
+// Test style to see if custom CSS is working
+body {
+  background-color: yellow;
+}
+
 // Disable the grayed-out effect on the entire author sidebar
 .site-author {
   opacity: 1 !important;
