@@ -1,0 +1,18 @@
+lance:
+  name: "Lance Brady"
+  avatar: "assets/images/avatar.jpg" # Replace with your profile picture's path
+  bio: "Baseball Analyst and Data Scientist"
+  location: "New Haven, CT"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/yourusername"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/yourprofile/"
+    - label: "Resume"
+      icon: "fas fa-file"
+      url: "/path/to/resume.pdf"
+    - label: "Transcript"
+      icon: "fas fa-file-alt"
+      url: "/path/to/transcript.pdf"
