@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: single
 title: "Lance Brady Baseball Analytics"
 list_title: ""
 author_profile: true
