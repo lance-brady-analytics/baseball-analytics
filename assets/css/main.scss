@@ -1,5 +1,6 @@
 ---
 ---
+
 @import "minimal-mistakes";
 
 // Disable the grayed-out effect on the entire author sidebar
@@ -17,11 +18,14 @@
   opacity: 1 !important;
 }
 
-// Allow the location text to wrap and display completely
+// Fix alignment of location icon and text
 .author__location {
-  white-space: normal;
-  overflow: visible;
-  text-overflow: initial;
+  display: inline-flex; /* Align icon and text horizontally */
+  align-items: center;  /* Vertically center the icon and text */
+  gap: 8px;             /* Add space between the icon and the text */
+  margin: 0;            /* Remove any extra margin */
+  padding: 0;           /* Remove any extra padding */
+  text-indent: 0;       /* Ensure no text indentation */
 }
 
 // Adjust the width of the author content
@@ -32,7 +36,7 @@
 
 // Increase the sidebar width
 .sidebar {
-  width: 300px;  // Adjust the width as needed
+  width: 300px; /* Adjust the width as needed */
 }
 
 // Customize the base font size and line height for body content
@@ -49,7 +53,7 @@ body {
 // Adjust font size for author name and bio
 .author__name,
 .author__bio {
-  font-size: 18px;
+  font-size: 18px; /* Slightly larger font for name and bio */
 }
 
 // Adjust font size for links
@@ -59,5 +63,5 @@ body {
 
 // Reduce margin between paragraphs
 p + p {
-  margin-top: 1em;  // Adjust as needed
+  margin-top: 1em; /* Adjust as needed */
 }
