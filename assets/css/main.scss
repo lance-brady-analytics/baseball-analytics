@@ -36,6 +36,27 @@ body {
   line-height: 1.6;     // Set your desired line height
 }
 
+// Adjust font size for sidebar content
+.sidebar .author__content {
+  font-size: 14px;  // Adjust to your desired font size
+}
+
+// Adjust font size for author name and bio
+.sidebar .author__name,
+.sidebar .author__bio {
+  font-size: 14px;  // Adjust as needed
+}
+
+// Adjust font size for location
+.sidebar .author__location {
+  font-size: 12px;  // Adjust as needed
+}
+
+// Adjust font size for links
+.sidebar .author__urls li {
+  font-size: 12px;  // Adjust as needed
+}
+
 // Reduce margin between paragraphs
 p + p {
   margin-top: 1em;  // Adjust as needed
