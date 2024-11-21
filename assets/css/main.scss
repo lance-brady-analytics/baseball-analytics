@@ -5,43 +5,42 @@
 
 // Fix alignment of location icon and text
 li[itemprop="homeLocation"] {
-  display: inline-flex;        /* Align icon and text horizontally */
-  align-items: center;         /* Center icon and text vertically */
-  gap: 8px;                    /* Add space between icon and text */
-  margin: 0;                   /* Remove any extra margins */
-  padding: 0;                  /* Remove any extra padding */
-  text-indent: 0;              /* Ensure no text indentation */
-  list-style: none;            /* Remove bullet points if present */
+  display: flex;                /* Flexbox for proper alignment */
+  align-items: center;          /* Center icon and text vertically */
+  gap: 6px;                     /* Add small space between icon and text */
+  margin: 0;                    /* Remove any default margins */
+  padding: 0;                   /* Remove any default padding */
+  list-style: none;             /* Remove any bullets */
 }
 
-// Fix styling for the Font Awesome icon
+// Icon-specific adjustments (Font Awesome)
 li[itemprop="homeLocation"] i {
-  font-size: 16px;             /* Ensure consistent icon size */
-  margin: 0;                   /* Remove default margins */
-  padding: 0;                  /* Remove default padding */
+  font-size: 1em;               /* Keep icon size proportional to text */
+  margin: 0;                    /* Ensure no extra margin */
+  padding: 0;                   /* Ensure no extra padding */
 }
 
-// Fix styling for the text
+// Text-specific adjustments (Location Text)
 li[itemprop="homeLocation"] span {
-  font-size: inherit;          /* Match sidebar font size */
-  margin: 0;                   /* Remove any extra margins */
-  padding: 0;                  /* Remove any extra padding */
+  font-size: inherit;           /* Ensure text matches inherited font size */
+  margin: 0;                    /* Remove any margin */
+  padding: 0;                   /* Remove any padding */
 }
 
-// General reset for sidebar list items
-.author__urls li {
-  margin: 0;                   /* Reset margin */
-  padding: 0;                  /* Reset padding */
-  list-style: none;            /* Ensure no bullets */
-}
-
-// General sidebar width
+// General Sidebar Adjustments
 .sidebar {
-  width: 300px;
+  width: 300px;                 /* Set a fixed sidebar width */
+}
+
+// Ensure consistent base font size
+.author__name,
+.author__bio,
+.author__urls li {
+  font-size: 16px;              /* Ensure consistent font size across sidebar */
 }
 
 // Base body font size
 body {
-  font-size: 16px;
+  font-size: 16px;              /* Maintain readable font size */
   line-height: 1.6;
 }
