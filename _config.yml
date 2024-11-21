@@ -3,6 +3,7 @@ plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
   - jekyll-include-cache
+  - jekyll-sass-converter
 
 title: "Lance Brady Analytics"
 description: "A repository of baseball analytics research, multivariate analysis, and scouting samples."
@@ -13,6 +14,9 @@ author: lance
 # Enable author profile and sidebar globally
 author_profile: true
 sidebar: true
+
+sass:
+  sass_dir: assets/css   # Where your SCSS files are located
 
 defaults:
   # Ensure sidebars are enabled for posts
