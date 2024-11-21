@@ -1,21 +1,9 @@
 ---
 ---
+
+$sidebar-author-opacity: 1 !default;  // Set the opacity to fully opaque
+
 @import "minimal-mistakes";
-
-// Disable the grayed-out effect on the entire author sidebar
-.site-author {
-  opacity: 1 !important;
-  transition: none !important;
-}
-
-.site-author:hover,
-.site-author:focus {
-  opacity: 1 !important;
-}
-
-.author__avatar {
-  opacity: 1 !important;
-}
 
 // Allow the location text to wrap and display completely
 .author__location {
@@ -41,23 +29,7 @@ body {
   line-height: 1.6;
 }
 
-// Adjust font size for sidebar content
-.author__content {
-  font-size: 16px;
-}
-
-// Adjust font size for author name and bio
-.author__name,
-.author__bio {
-  font-size: 18px;
-}
-
-// Adjust font size for links
-.author__urls li {
-  font-size: 14px;
-}
-
 // Reduce margin between paragraphs
 p + p {
-  margin-top: 1em;  // Adjust as needed
+  margin-top: 1em;
 }
