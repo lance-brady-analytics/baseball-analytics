@@ -2,13 +2,12 @@
 ---
 @import "minimal-mistakes";
 
-// Disable the grayed-out effect on the sidebar author links
-.author__urls-wrapper {
+// Disable the grayed-out effect on the entire author sidebar
+.site-author {
   opacity: 1 !important;
 }
 
-// Disable the grayed-out effect on the avatar image
-.author__avatar img {
+.site-author:hover {
   opacity: 1 !important;
 }
 
