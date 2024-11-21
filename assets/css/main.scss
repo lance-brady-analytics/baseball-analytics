@@ -3,13 +3,13 @@
 @import "minimal-mistakes";
 
 // Disable the grayed-out effect on the entire author sidebar
-.sidebar .site-author {
+.site-author {
   opacity: 1 !important;
   transition: none !important;
 }
 
-.sidebar .site-author:hover,
-.sidebar .site-author:focus {
+.site-author:hover,
+.site-author:focus {
   opacity: 1 !important;
 }
 
@@ -20,6 +20,7 @@
   text-overflow: initial;
 }
 
+// Adjust the width of the author content
 .author__content {
   width: 100%;
   max-width: none;
@@ -30,31 +31,31 @@
   width: 300px;  // Adjust the width as needed
 }
 
-// Customize the base font size and line height
+// Customize the base font size and line height for body content
 body {
-  font-size: 16px;      // Set your desired font size
-  line-height: 1.6;     // Set your desired line height
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 // Adjust font size for sidebar content
-.sidebar .author__content {
-  font-size: 14px;  // Adjust to your desired font size
+.author__content {
+  font-size: 16px;
 }
 
 // Adjust font size for author name and bio
-.sidebar .author__name,
-.sidebar .author__bio {
-  font-size: 14px;  // Adjust as needed
+.author__name,
+.author__bio {
+  font-size: 16px;
 }
 
 // Adjust font size for location
-.sidebar .author__location {
-  font-size: 12px;  // Adjust as needed
+.author__location {
+  font-size: 14px;
 }
 
 // Adjust font size for links
-.sidebar .author__urls li {
-  font-size: 12px;  // Adjust as needed
+.author__urls li {
+  font-size: 14px;
 }
 
 // Reduce margin between paragraphs
