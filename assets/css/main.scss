@@ -1,28 +1,44 @@
 ---
 ---
 
-$sidebar-author-opacity: 1 !default;  // Set the opacity to fully opaque
+$sidebar-author-opacity: 1 !default;
 
 @import "minimal-mistakes";
 
-// Adjust the width of the author content
+// Allow the location text to wrap and align properly
+.author__location {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: initial;
+  display: flex; /* Use flexbox for better alignment */
+  align-items: center; /* Center the icon and text */
+  margin: 0; /* Remove unwanted margin */
+  padding: 0; /* Remove unwanted padding */
+  text-indent: 0; /* Ensure no indentation */
+}
+
+// Ensure consistent sidebar content styling
 .author__content {
   width: 100%;
   max-width: none;
 }
 
-// Increase the sidebar width
+// Increase sidebar width
 .sidebar {
-  width: 300px;  // Adjust the width as needed
+  width: 300px; /* Adjust as needed */
 }
 
-// Customize the base font size and line height for body content
+// Customize the font sizes
+.author__name,
+.author__bio,
+.author__location,
+.author__urls li {
+  font-size: 16px; /* Adjust font size for consistency */
+  margin: 0; /* Remove extra margin */
+}
+
+// Base styling for the body
 body {
   font-size: 16px;
   line-height: 1.6;
-}
-
-// Reduce margin between paragraphs
-p + p {
-  margin-top: 1em;
 }
