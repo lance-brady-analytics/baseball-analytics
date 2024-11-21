@@ -3,11 +3,13 @@
 @import "minimal-mistakes";
 
 // Disable the grayed-out effect on the entire author sidebar
-.site-author {
+.sidebar .site-author {
   opacity: 1 !important;
+  transition: none !important;
 }
 
-.site-author:hover {
+.sidebar .site-author:hover,
+.sidebar .site-author:focus {
   opacity: 1 !important;
 }
 
