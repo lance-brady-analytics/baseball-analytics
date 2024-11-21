@@ -8,36 +8,36 @@ title: "Lance Brady Analytics"
 description: "A repository of baseball analytics research, multivariate analysis, and scouting samples."
 baseurl: "/baseball-analytics/"
 url: "https://lance-brady-analytics.github.io"
+
+# Enable author profile and sidebar globally
 author_profile: true
 sidebar: true
 
 defaults:
+  # Ensure sidebars are enabled for posts
   - scope:
       path: ""
       type: "posts"
     values:
       sidebar: true
-      nav: "home"
-
+  # Ensure sidebars are enabled for pages
   - scope:
       path: ""
       type: "pages"
     values:
       sidebar: true
-      nav:
 
-minimal_mistakes:
-  navigation:
-    - title: "Home"
-      url: /
-    - title: "Baseball Research"
-      url: /baseball-research/
-    - title: "Statcast 2023 Analysis"
-      url: /statcast2023-multivariate-analysis/
-    - title: "Scouting Samples"
-      url: /frontier-league-pitcher-scouting-samples/
+# Minimal Mistakes navigation menu configuration
+navigation:
+  - title: "Home"
+    url: /
+  - title: "Baseball Research"
+    url: /baseball-research/
+  - title: "Statcast 2023 Analysis"
+    url: /statcast2023-multivariate-analysis/
+  - title: "Scouting Samples"
+    url: /frontier-league-pitcher-scouting-samples/
 
+# Additional settings for Minimal Mistakes
 minimal_mistakes_skin: "default"
 fontawesome: true
-
-
