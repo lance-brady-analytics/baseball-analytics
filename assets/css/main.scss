@@ -1,43 +1,39 @@
 ---
 ---
 
-$sidebar-author-opacity: 1 !default;
+$sidebar-author-opacity: 1 !default;  // Ensure no grayed-out effect
 
 @import "minimal-mistakes";
 
-// Allow the location text to wrap and align properly
+// Fix location text alignment
 .author__location {
-  white-space: normal;
-  overflow: visible;
-  text-overflow: initial;
-  display: flex; /* Use flexbox for better alignment */
-  align-items: center; /* Center the icon and text */
-  margin: 0; /* Remove unwanted margin */
-  padding: 0; /* Remove unwanted padding */
-  text-indent: 0; /* Ensure no indentation */
+  display: inline-flex; /* Align icon and text horizontally */
+  align-items: center;  /* Center icon and text vertically */
+  gap: 8px;             /* Add space between icon and text */
+  margin: 0;            /* Remove unwanted margins */
+  padding: 0;           /* Remove unwanted padding */
+  text-indent: 0;       /* Ensure no extra indentation */
+  font-size: inherit;   /* Use the default font size */
 }
 
-// Ensure consistent sidebar content styling
-.author__content {
-  width: 100%;
-  max-width: none;
-}
-
-// Increase sidebar width
-.sidebar {
-  width: 300px; /* Adjust as needed */
-}
-
-// Customize the font sizes
+// Sidebar font size and spacing
+.author__content,
 .author__name,
 .author__bio,
 .author__location,
 .author__urls li {
-  font-size: 16px; /* Adjust font size for consistency */
-  margin: 0; /* Remove extra margin */
+  font-size: 16px;  /* Set preferred font size */
+  line-height: 1.5; /* Ensure good spacing between lines */
+  margin: 0;        /* Remove unwanted spacing */
+  padding: 0;       /* Remove unwanted spacing */
 }
 
-// Base styling for the body
+// Ensure sidebar width
+.sidebar {
+  width: 300px;
+}
+
+// Base font size for the body
 body {
   font-size: 16px;
   line-height: 1.6;
