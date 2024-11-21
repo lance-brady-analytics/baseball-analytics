@@ -31,15 +31,6 @@ defaults:
 
 # Minimal Mistakes navigation menu configuration
 navigation: []
-  - title: "Home"
-    url: /
-  - title: "Baseball Research"
-    url: /baseball-research/
-  - title: "Statcast 2023 Analysis"
-    url: /statcast2023-multivariate-analysis/
-  - title: "Scouting Samples"
-    url: /frontier-league-pitcher-scouting-samples/
-
 
 # Additional settings for Minimal Mistakes
 minimal_mistakes_skin: "default"
