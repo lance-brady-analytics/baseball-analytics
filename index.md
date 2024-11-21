@@ -2,6 +2,8 @@
 layout: home
 title: "Lance Brady Baseball Analytics"
 list_title: ""
+author_profile: true
+sidebar: true
 ---
 Welcome to my Baseball Analytics Repository! I am a senior at Yale majoring in Statistics & Data Science with a passion for baseball. This repository is a collection of various projects and analyses focused on different aspects of baseball, combining research, statistical techniques, and scouting insights.
 
