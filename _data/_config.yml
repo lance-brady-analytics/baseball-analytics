@@ -36,4 +36,7 @@ minimal_mistakes:
     - title: "Scouting Samples"
       url: /frontier-league-pitcher-scouting-samples/
 
+minimal_mistakes_skin: "default"
+fontawesome: true
+
 
