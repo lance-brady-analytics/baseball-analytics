@@ -30,7 +30,7 @@ defaults:
       author_profile: true
 
 # Minimal Mistakes navigation menu configuration
-navigation:
+navigation: []
   - title: "Home"
     url: /
   - title: "Baseball Research"
@@ -39,6 +39,7 @@ navigation:
     url: /statcast2023-multivariate-analysis/
   - title: "Scouting Samples"
     url: /frontier-league-pitcher-scouting-samples/
+
 
 # Additional settings for Minimal Mistakes
 minimal_mistakes_skin: "default"
