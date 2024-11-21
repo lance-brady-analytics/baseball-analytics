@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Lance Brady Baseball Analytics"
+author: lance
 author_profile: true
 sidebar: true
 ---
