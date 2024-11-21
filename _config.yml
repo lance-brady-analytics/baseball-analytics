@@ -1,4 +1,7 @@
 remote_theme: "mmistakes/minimal-mistakes"
+
+sass:
+  sass_dir: assets/css   # Where your SCSS files are located
 plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
@@ -14,9 +17,6 @@ author: lance
 # Enable author profile and sidebar globally
 author_profile: true
 sidebar: true
-
-sass:
-  sass_dir: assets/css   # Where your SCSS files are located
 
 defaults:
   # Ensure sidebars are enabled for posts
