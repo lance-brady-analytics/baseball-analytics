@@ -20,12 +20,14 @@ defaults:
       type: "posts"
     values:
       sidebar: true
+      author_profile: true
   # Ensure sidebars are enabled for pages
   - scope:
       path: ""
       type: "pages"
     values:
       sidebar: true
+      author_profile: true
 
 # Minimal Mistakes navigation menu configuration
 navigation:
