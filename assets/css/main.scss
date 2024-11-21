@@ -1,40 +1,63 @@
 ---
 ---
-
-$sidebar-author-opacity: 1 !default;  // Ensure no grayed-out effect
-
 @import "minimal-mistakes";
 
-// Fix location text alignment
+// Disable the grayed-out effect on the entire author sidebar
+.site-author {
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+.site-author:hover,
+.site-author:focus {
+  opacity: 1 !important;
+}
+
+.author__avatar {
+  opacity: 1 !important;
+}
+
+// Allow the location text to wrap and display completely
 .author__location {
-  display: inline-flex; /* Align icon and text horizontally */
-  align-items: center;  /* Center icon and text vertically */
-  gap: 8px;             /* Add space between icon and text */
-  margin: 0;            /* Remove unwanted margins */
-  padding: 0;           /* Remove unwanted padding */
-  text-indent: 0;       /* Ensure no extra indentation */
-  font-size: inherit;   /* Use the default font size */
+  white-space: normal;
+  overflow: visible;
+  text-overflow: initial;
 }
 
-// Sidebar font size and spacing
-.author__content,
-.author__name,
-.author__bio,
-.author__location,
-.author__urls li {
-  font-size: 16px;  /* Set preferred font size */
-  line-height: 1.5; /* Ensure good spacing between lines */
-  margin: 0;        /* Remove unwanted spacing */
-  padding: 0;       /* Remove unwanted spacing */
+// Adjust the width of the author content
+.author__content {
+  width: 100%;
+  max-width: none;
 }
 
-// Ensure sidebar width
+// Increase the sidebar width
 .sidebar {
-  width: 300px;
+  width: 300px;  // Adjust the width as needed
 }
 
-// Base font size for the body
+// Customize the base font size and line height for body content
 body {
   font-size: 16px;
   line-height: 1.6;
+}
+
+// Adjust font size for sidebar content
+.author__content {
+  font-size: 16px;
+}
+
+// Adjust font size for author name and bio
+.author__name,
+.author__bio {
+  font-size: 18px;
+}
+
+// Adjust font size for links
+.author__urls li {
+  font-size: 14px;
+}
+
+// Reduce margin between paragraphs
+p + p {
+  margin-top: 1em;  // Adjust as needed
 }
