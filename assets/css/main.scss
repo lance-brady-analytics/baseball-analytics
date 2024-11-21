@@ -3,65 +3,34 @@
 
 @import "minimal-mistakes";
 
-// Disable the grayed-out effect on the entire author sidebar
-.site-author {
-  opacity: 1 !important;
-  transition: none !important;
-}
-
-.site-author:hover,
-.site-author:focus {
-  opacity: 1 !important;
-}
-
-.author__avatar {
-  opacity: 1 !important;
-}
-
-// Fix alignment of location icon and text
+// General Reset for the Location Element
 .author__location {
-  display: inline-flex; /* Align icon and text horizontally */
-  align-items: center;  /* Vertically center the icon and text */
-  gap: 8px;             /* Add space between the icon and the text */
-  margin: 0;            /* Remove any extra margin */
-  padding: 0;           /* Remove any extra padding */
-  text-indent: 0;       /* Ensure no text indentation */
+  display: flex;               /* Use flexbox for proper alignment */
+  align-items: center;         /* Center icon and text vertically */
+  gap: 8px;                    /* Space between the icon and the text */
+  font-size: inherit;          /* Ensure it uses the inherited font size */
+  line-height: inherit;        /* Match the line height */
+  margin: 0;                   /* Reset any inherited margins */
+  padding: 0;                  /* Reset any inherited padding */
+  text-indent: 0;              /* Ensure no indentation */
 }
 
-// Adjust the width of the author content
-.author__content {
-  width: 100%;
-  max-width: none;
+// Sidebar Specific Reset for List and Text
+.sidebar p,
+.sidebar li {
+  font-size: 16px;             /* Ensure consistent font size */
+  line-height: 1.5;            /* Adjust line spacing */
+  margin: 0;                   /* Reset unwanted margin */
+  padding: 0;                  /* Reset unwanted padding */
 }
 
-// Increase the sidebar width
+// Fix General Sidebar Layout
 .sidebar {
-  width: 300px; /* Adjust the width as needed */
+  width: 300px;                /* Ensure the sidebar width is consistent */
 }
 
-// Customize the base font size and line height for body content
+// Ensure Base Font Settings
 body {
   font-size: 16px;
   line-height: 1.6;
-}
-
-// Adjust font size for sidebar content
-.author__content {
-  font-size: 16px;
-}
-
-// Adjust font size for author name and bio
-.author__name,
-.author__bio {
-  font-size: 18px; /* Slightly larger font for name and bio */
-}
-
-// Adjust font size for links
-.author__urls li {
-  font-size: 14px;
-}
-
-// Reduce margin between paragraphs
-p + p {
-  margin-top: 1em; /* Adjust as needed */
 }
