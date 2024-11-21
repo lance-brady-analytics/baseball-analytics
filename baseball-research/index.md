@@ -2,6 +2,8 @@
 layout: single
 title: Baseball Research
 permalink: /baseball-research/
+author_profile: true
+sidebar: true
 ---
 
 This folder contains a document with abstracts of the following projects:
