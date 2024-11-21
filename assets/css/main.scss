@@ -18,6 +18,11 @@
   text-overflow: initial;
 }
 
+.author__content {
+  width: 100%;
+  max-width: none;
+}
+
 // Increase the sidebar width
 .sidebar {
   width: 300px;  // Adjust the width as needed
