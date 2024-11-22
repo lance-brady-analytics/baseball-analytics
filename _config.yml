@@ -10,7 +10,7 @@ plugins:
 
 title: "Lance Brady Analytics"
 description: "A repository of baseball analytics research, multivariate analysis, and scouting samples."
-baseurl: "/baseball-analytics/"
+baseurl: ""
 url: "https://lance-brady-analytics.github.io"
 author: lance
 
