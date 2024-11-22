@@ -2,7 +2,6 @@ lance:
   name: "Lance Brady"
   avatar: "Lance%20Brady%20Headshot.jpg" # Replace with your profile picture's path
   bio: "Baseball Analyst and Data Scientist"
-  location: "Greater New York Metropolitan Area"
   links:
     - label: "GitHub"
       icon: "fab fa-github"
