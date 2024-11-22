@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Statcast 2023 Multivariate Analysis
-permalink: /statcast2023-multivariate-analysis/
+permalink:
 author_profile: true
 sidebar: true
 ---
