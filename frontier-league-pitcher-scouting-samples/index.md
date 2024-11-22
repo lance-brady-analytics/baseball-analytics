@@ -1,7 +1,6 @@
 ---
 layout: single
 title: Frontier League Scouting Samples
-permalink:
 author_profile: true
 sidebar: true
 ---
