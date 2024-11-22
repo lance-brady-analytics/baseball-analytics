@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Baseball Research
-permalink: /baseball-research/
+permalink: /baseball-analytics/baseball-research/
 author_profile: true
 sidebar: true
 ---
