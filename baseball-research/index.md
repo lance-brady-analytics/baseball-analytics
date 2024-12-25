@@ -12,5 +12,5 @@ This folder contains a document with abstracts of the following projects:
 
 These projects will be completed in December 2024.
 - [Baseball Analytics Projects Abstracts (PDF)](Baseball%20Analytics%20Projects%20Abstracts.pdf)
-- [Beyond the Glove: Quantifying the Hidden Value of Catchers in Major League Baseball (PDF](Beyond%20the%20Glove%20Paper.pdf)
+- [Beyond the Glove: Quantifying the Hidden Value of Catchers in Major League Baseball (PDF)](Beyond%20the%20Glove%20Paper.pdf)
 
